@@ -1,0 +1,30 @@
+{
+  "entry": [
+    {
+      "id": "123456789",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "+1234567890",
+              "phone_number_id": "987654321"
+            },
+            "messages": [
+              {
+                "id": "wamid.HBgMMTIzNDU2Nzg5MBUCABIYFjNBMDZENDM5QjA0QjA0QjA0QjA0",
+                "from": "1234567890",
+                "timestamp": "1703123456",
+                "type": "text",
+                "text": {
+                  "body": "Hello! This is a sample message from the webhook system."
+                }
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+} 

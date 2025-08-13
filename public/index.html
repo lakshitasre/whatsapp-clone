@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Web Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Header -->
+            <div class="sidebar-header">
+                <div class="profile-section">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h3>WhatsApp Clone</h3>
+                        <p>Web Interface</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn" id="newChatBtn">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="icon-btn" id="menuBtn">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search or start new chat" id="searchInput">
+                </div>
+            </div>
+
+            <!-- Conversations List -->
+            <div class="conversations-list" id="conversationsList">
+                <!-- Conversations will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main-chat" id="mainChat">
+            <!-- Welcome Screen -->
+            <div class="welcome-screen" id="welcomeScreen">
+                <div class="welcome-content">
+                    <div class="welcome-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h1>Welcome to WhatsApp Clone</h1>
+                    <p>Select a conversation to start chatting</p>
+                    <div class="demo-info">
+                        <h3>Demo Features:</h3>
+                        <ul>
+                            <li>✅ Real-time message updates</li>
+                            <li>✅ Webhook payload processing</li>
+                            <li>✅ Message status tracking</li>
+                            <li>✅ Responsive design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Interface (Hidden by default) -->
+            <div class="chat-interface" id="chatInterface" style="display: none;">
+                <!-- Chat Header -->
+                <div class="chat-header">
+                    <div class="chat-user-info">
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="user-details">
+                            <h3 id="chatUserName">User Name</h3>
+                            <p id="chatUserStatus">Online</p>
+                        </div>
+                    </div>
+                    <div class="chat-actions">
+                        <button class="icon-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="icon-btn">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Messages Container -->
+                <div class="messages-container" id="messagesContainer">
+                    <!-- Messages will be loaded here -->
+                </div>
+
+                <!-- Message Input -->
+                <div class="message-input-container">
+                    <div class="message-input-wrapper">
+                        <button class="icon-btn emoji-btn">
+                            <i class="fas fa-smile"></i>
+                        </button>
+                        <div class="message-input">
+                            <input type="text" placeholder="Type a message" id="messageInput">
+                        </div>
+                        <button class="icon-btn attach-btn">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+                        <button class="send-btn" id="sendBtn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Chat Modal -->
+    <div class="modal" id="newChatModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>New Chat</h3>
+                <button class="close-btn" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="waIdInput">WhatsApp ID (Phone Number):</label>
+                    <input type="text" id="waIdInput" placeholder="e.g., 1234567890">
+                </div>
+                <div class="form-group">
+                    <label for="userNameInput">Display Name:</label>
+                    <input type="text" id="userNameInput" placeholder="e.g., John Doe">
+                </div>
+                <button class="btn btn-primary" id="createChatBtn">Create Chat</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 

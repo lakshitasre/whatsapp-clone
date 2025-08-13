@@ -1,0 +1,26 @@
+{
+  "entry": [
+    {
+      "id": "123456789",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "phone_number_id": "987654321"
+            },
+            "statuses": [
+              {
+                "id": "wamid.HBgMMTIzNDU2Nzg5MBUCABIYFjNBMDZENDM5QjA0QjA0QjA0QjA0",
+                "status": "delivered",
+                "timestamp": "1703123457",
+                "recipient_id": "1234567890"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+} 

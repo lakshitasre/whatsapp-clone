@@ -1,0 +1,30 @@
+{
+  "entry": [
+    {
+      "id": "test_requirement_123",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "+9876543210",
+              "phone_number_id": "test_wa_id_456"
+            },
+            "messages": [
+              {
+                "id": "wamid.test_requirement_message",
+                "from": "9876543210",
+                "timestamp": "1703123456",
+                "type": "text",
+                "text": {
+                  "body": "This message tests all webhook processing requirements!"
+                }
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+} 
