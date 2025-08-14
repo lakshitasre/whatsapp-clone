@@ -22,24 +22,12 @@ This will process sample payloads and populate your database.
 
 ## 🌐 Deploy to Production
 
-### Option 1: Vercel (Recommended)
-```bash
-npm i -g vercel
-npm run deploy:vercel
-```
-
-### Option 2: Render
+### Render Deployment
 1. Push code to GitHub
 2. Connect repo to Render
 3. Set build: `npm install`
 4. Set start: `npm start`
 
-### Option 3: Heroku
-```bash
-npm i -g heroku
-heroku create your-app-name
-git push heroku main
-```
 
 ## 🧪 Test Webhook Endpoint
 
@@ -70,11 +58,6 @@ curl -X POST http://localhost:3000/webhook \
 - Check browser console
 - Verify MongoDB connection
 - Test webhook endpoint
-
-**Need help?**
-- Check README.md for full documentation
-- Review server logs for errors
-- Verify database collections exist
 
 ---
 
