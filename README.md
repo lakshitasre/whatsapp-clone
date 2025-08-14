@@ -144,21 +144,12 @@ curl -X POST http://localhost:3000/webhook \
 
 ## 🚀 Deployment
 
-### Vercel Deployment
-1. Install Vercel CLI: `npm i -g vercel`
-2. Deploy: `vercel --prod`
-
 ### Render Deployment
 1. Connect your GitHub repository
 2. Set build command: `npm install`
 3. Set start command: `npm start`
 4. Add environment variables
 
-### Heroku Deployment
-1. Install Heroku CLI
-2. Create app: `heroku create your-app-name`
-3. Set environment variables
-4. Deploy: `git push heroku main`
 
 ### Environment Variables for Production
 ```env
@@ -278,24 +269,6 @@ process.env.DEBUG = 'socket.io:*';
 3. Make your changes
 4. Add tests if applicable
 5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- WhatsApp Web for design inspiration
-- MongoDB Atlas for database hosting
-- Socket.IO for real-time functionality
-- Font Awesome for icons
-
-## 📞 Support
-
-For support and questions:
-- Create an issue in the repository
-- Check the troubleshooting section
-- Review the API documentation
 
 ---
 
